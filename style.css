@@ -599,7 +599,7 @@ textarea.form-control {
     resize: vertical;
 }
 
-/* تصميم التذييل */
+
 footer {
     background-color: var(--dark);
     color: white;
@@ -680,82 +680,4 @@ footer {
     animation: fadeIn 0.8s ease;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-
-@media (max-width: 1200px) {
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .about-content,
-    .contact-content {
-        flex-direction: column;
-    }
-    
-    .hero h1 {
-        font-size: 3rem;
-    }
-    
-    .section-title h2 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-    
-    nav ul {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 80%;
-        height: calc(100vh - 70px);
-        background-color: var(--primary);
-        flex-direction: column;
-        align-items: center;
-        padding-top: 3rem;
-        transition: var(--transition);
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    nav ul.active {
-        right: 0;
-    }
-    
-    nav ul li {
-        margin: 1.5rem 0;
-    }
-    
-    .hero {
-        padding: 10rem 0 6rem;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-    }
-    
-    .section-title h2 {
-        font-size: 2.2rem;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-form {
-        padding: 2rem;
-    }
-}
 
