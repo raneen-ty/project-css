@@ -33,18 +33,17 @@ body {
     padding: 0 20px;
 }
 
-
 header {
     background: rgba(10, 23, 78, 0.95);
     backdrop-filter: blur(10px);
     color: white;
-    padding: 1.2rem 0;
+    padding: 1.5rem 0;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
 }
 
@@ -52,50 +51,52 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: var(--secondary);
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition: var(--transition);
 }
 
 .logo span {
     color: white;
-    margin-right: 5px;
+    margin-right: 6px;
+    font-size: 2rem;
 }
 
 .logo i {
     margin-left: 8px;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    transition: transform 0.4s;
+}
+
+.logo:hover i {
+    transform: rotate(-15deg);
 }
 
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 2rem;
+    gap: 2rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: var(--transition);
-    padding: 0.5rem 0;
+    padding: 0.7rem 0;
     position: relative;
     font-size: 1.1rem;
 }
 
-nav ul li a:hover {
-    color: var(--secondary);
-}
-
+nav ul li a:hover,
 nav ul li a.active {
     color: var(--secondary);
 }
@@ -103,10 +104,10 @@ nav ul li a.active {
 nav ul li a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     right: 0;
     width: 0;
-    height: 2px;
+    height: 3px;
     background-color: var(--secondary);
     transition: var(--transition);
 }
@@ -116,13 +117,16 @@ nav ul li a.active::after {
     width: 100%;
 }
 
-.hamburger {
-    display: none;
+.lang-select {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-weight: 600;
     cursor: pointer;
-    font-size: 1.8rem;
-    color: white;
+    transition: var(--transition);
 }
-
 
 section {
     padding: 6rem 0;
@@ -161,7 +165,6 @@ section {
     max-width: 600px;
     margin: 0 auto;
 }
-
 
 .hero {
     background: linear-gradient(135deg, var(--primary) 0%, #1a2a6c 100%);
@@ -510,6 +513,7 @@ section {
 
 .contact-content {
     display: flex;
+    flex-direction: row-reverse;
     gap: 4rem;
 }
 
@@ -591,7 +595,7 @@ section {
     border-color: var(--secondary);
     outline: none;
     box-shadow: 0 0 0 3px rgba(245, 208, 66, 0.2);
-    background: rgba(255, 255, 255, 0.15);
+    background:var(--primary);
 }
 
 textarea.form-control {
@@ -679,5 +683,6 @@ footer {
     display: block;
     animation: fadeIn 0.8s ease;
 }
+
 
 
